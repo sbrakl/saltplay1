@@ -1,0 +1,4 @@
+C:\KiwiServices\:
+  file.recurse:
+    - source: salt://deploycode/www
+    - include_empty: True
