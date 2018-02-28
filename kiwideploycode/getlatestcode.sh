@@ -1,7 +1,12 @@
 #!/bin/bash
-zipfn='Kiwi.DemoAppService.0.0.2.0.zip'
-cfn='./compressfile/'$zipfn # Compress file path
 
+# Get Script directory
+scriptdir=$(cd `dirname $0` && pwd)
+echo "#### Script Dir:$scriptdir"
+
+zipfn='Kiwi.DemoAppService.0.0.1.0.zip'
+cfn="$scriptdir/compressfile/$zipfn" # Compress file path
+pcd="$scriptdir/publishcode" # Publish code directory
 
 # Check if file exists
 if [ -f $cfn ]; then
@@ -11,9 +16,9 @@ if [ -f $cfn ]; then
 fi
 
 # Check if publish code exist
-if [ -d ./publishcode ]; then
+if [ -d $pcd ]; then
     echo "#### Publish code directory exist, deleting"
-    rm -rf ./publishcode
+    rm -rf $pcd
 fi
 
 # Download the zipfile
@@ -22,4 +27,4 @@ gsutil cp gs://kiwilivewinpackages/faltuservice/$zipfn $cfn
 
 # Unzip the file to publish folder
 echo "#### Unzip in to the publishcode directory"
-unzip $cfn -d .
+unzip $cfn -d $scriptdir
