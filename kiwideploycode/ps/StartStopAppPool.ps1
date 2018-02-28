@@ -7,6 +7,7 @@ $AppPool = "kiwiservicesAppPool"
 if ($StartStop.ToLower() -eq "stop") {
     Write-Host "Stopping AppPool: $AppPool"
     Stop-WebAppPool -name $AppPool;
+    Start-Sleep -s 2; # Sleep for 2 second
 }
 elseif ($StartStop.ToLower() -eq "start") {
     $i = 1

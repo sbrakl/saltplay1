@@ -1,5 +1,5 @@
 #!/bin/bash
-zipfn='Kiwi.DemoAppService.0.0.1.0.zip'
+zipfn='Kiwi.DemoAppService.0.0.2.0.zip'
 cfn='./compressfile/'$zipfn # Compress file path
 
 
