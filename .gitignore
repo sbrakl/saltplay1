@@ -1,2 +1,3 @@
 /kiwideploycode/publishcode/*
 /kiwideploycode/compressfile/*
+*.pyc
