@@ -2,7 +2,7 @@ set_environment_vars:
   environ.setenv:
     - name: 
     - value: 
-    {% for env, val in salt['pillar.get'](application_name ~ ':environment_vars', {}).iteritems() %}
+    {% for env, val in salt['pillar.get']('kiwi:store_win:environment_vars', {}).items() %}
       {{ env }}: {{ val }}
     {% endfor %}
     - permanent: HKLM
