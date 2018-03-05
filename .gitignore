@@ -1,3 +1,4 @@
 /kiwideploycode/publishcode/*
 /kiwideploycode/compressfile/*
+/largefilesync/publish*
 *.pyc
