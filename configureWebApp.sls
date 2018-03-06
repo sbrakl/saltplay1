@@ -7,7 +7,9 @@ setup_apppool:
       - name: kiwiservicesAppPool
       - container: AppPools
       - settings:
-          managedRuntimeVersion: "" 
+          managedRuntimeVersion: ""
+          processModel.idleTimeout: 180
+          Recycling.periodicRestart.schedule: "23:00:00"
       - require:
          - win_iis: create_apppool
 
