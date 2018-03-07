@@ -2,3 +2,4 @@
 /kiwideploycode/compressfile/*
 /largefilesync/publish*
 *.pyc
+__pycache__/
