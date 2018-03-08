@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import subprocess
 
@@ -8,6 +8,7 @@ def execute(command, displayoutput=True):
     # Poll process for new output until finished
     while displayoutput:
         nextline = process.stdout.readline()
+        nextline = nextline.decode('utf-8')
         if nextline == '' and process.poll() is not None:
             break
         sys.stdout.write(nextline)

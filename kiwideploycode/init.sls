@@ -1,3 +1,5 @@
+{% set deploydir = salt['pillar.get']('kiwi:store_win:baseIISdir', '') %}
+
 copy_ps_file:
   file.managed:
     - name: C:\KiwiSalt\ps\StartStopAppPool.ps1
@@ -11,7 +13,7 @@ stop_apppool:
     - env:
       - ExecutionPolicy: "bypass"
 
-C:\KiwiServices\:
+{{ deploydir }}:
   file.recurse:
     - source: salt://kiwideploycode/publishcode
     - clean: true

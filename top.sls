@@ -1,3 +1,6 @@
 base:
-  '*':
-    - base_echo 
+  'in-win*':
+    - installIIS
+    - windotnetcorehosting
+    - configureWebApp
+ 

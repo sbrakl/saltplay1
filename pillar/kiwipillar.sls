@@ -7,3 +7,5 @@ kiwi:
       KiwiOAuthDatabaseConnectionString: "server=10.204.2.221;user id=kiwioauthservices;password=T6t-dm2wqb;database=oauth;"
       KiwiDatabaseType: "mysql"
       KiwiServerType: "2"
+    baseIISdir: "C:\\KiwiServices"
+    servicename: "branchsettingservice"
