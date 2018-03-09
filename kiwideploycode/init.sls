@@ -1,4 +1,7 @@
 {% set deploydir = salt['pillar.get']('kiwi:store_win:baseIISdir', '') %}
+{% set sn = salt['pillar.get']('kiwi:store_win:servicename', '') %}
+{% set serdir = deploydir + "\\" + sn %}
+{% set saltdir = 'salt://kiwideploycode/publishcode/' + sn %}
 
 copy_ps_file:
   file.managed:
@@ -13,9 +16,9 @@ stop_apppool:
     - env:
       - ExecutionPolicy: "bypass"
 
-{{ deploydir }}:
+{{ serdir }}:
   file.recurse:
-    - source: salt://kiwideploycode/publishcode
+    - source: {{ saltdir }}
     - clean: true
     - include_empty: True
 
