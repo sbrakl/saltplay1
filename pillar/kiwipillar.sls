@@ -1,11 +1,11 @@
 kiwi:
-  store_win:
-    environment_vars:
-      ASPNETCORE_ENVIRONMENT: "LIVE"
-      KiwiAuthorizationMode: "0"
-      KiwiDatabaseConnectionString: "server=10.203.1.224;userid=kiwiservices;password=k!W1$e@vci3s;database=epos2000;"
-      KiwiOAuthDatabaseConnectionString: "server=10.204.2.221;user id=kiwioauthservices;password=T6t-dm2wqb;database=oauth;"
-      KiwiDatabaseType: "mysql"
-      KiwiServerType: "2"
-    baseIISdir: "C:\\KiwiServices"
-    servicename: "branchsettingservice"
+    store_win:
+        environment_vars:
+            ASPNETCORE_ENVIRONMENT: "LIVE"
+            KiwiAuthorizationMode: "0"
+            KiwiDatabaseConnectionString: "server=192.168.1.1;userid=db1servicesuser;password=p@s$w0rd;database=db1;"
+            KiwiOAuthDatabaseConnectionString: "server=192.168.1.1;user id=db2servicesuser;password=p@s$w0rd;database=db2;"
+            KiwiDatabaseType: "mysql"
+            KiwiServerType: "2"
+        baseIISdir: "C:\\KiwiServices"
+        servicename: "branchservice"
