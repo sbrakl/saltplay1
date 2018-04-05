@@ -1,5 +1,5 @@
-/kiwideploycode/publishcode/*
-/kiwideploycode/compressfile/*
+/appledeploycode/publishcode/*
+/appledeploycode/compressfile/*
 /largefilesync/publish*
 *.pyc
 __pycache__/
